@@ -1,14 +1,32 @@
 import os
 
-simbolo1 = input(' J1 escreva o valor que você quer que represente seu simbolo: ')
-simbolo1 = simbolo1[0]
+while True:
+    simbolo1 = input(' J1 escreva o valor que você quer que represente seu simbolo: ')
+    if(len(simbolo1)<1):
+        print('precisa ter pelo menos 1 caractere.')
+    elif(simbolo1[0] == ' '):
+        print('não pode começar com espaço.')
+    elif(simbolo1[0] == ' '):
+        print('tem que ser visivel')
+    else:
+        print('funcionou')
+        break
 while True:
     simbolo2 = input(' J2 escreva o valor que você quer que represente seu simbolo: ')
-    simbolo2 = simbolo2[0]
-    if (simbolo1 == simbolo2):
-        print ('esse simbolo já esta sendo usado')
+    if(len(simbolo2)<1):
+        print('precisa ter pelo menos 1 caractere.')
+    elif(simbolo2[0] == ' '):
+        print('não pode começar com espaço.')
+    elif(simbolo2[0] == ' '):
+        print('tem que ser visivel')
+    elif(simbolo1[0]  == simbolo2[0]):
+        print('esse simbolo ja esta sendo utilizado')
     else:
         break
+simbolo1 = simbolo1[0]
+simbolo2 = simbolo2[0]
+
+print('simbolos;',simbolo1,simbolo2)
 
 class JogoDaVela:
     tabuleiro = {'7': ' ', '8': ' ', '9': ' ', '4': ' ', '5': ' ', '6': ' ', '1': ' ', '2': ' ', '3': ' '}
@@ -104,6 +122,11 @@ class JogoDaVela:
 jogo = JogoDaVela()
 
 jogo.jogar()
+
+
+
+
+
 
 
 
